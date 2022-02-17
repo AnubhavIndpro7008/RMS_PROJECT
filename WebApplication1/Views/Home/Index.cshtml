@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication1.Models.reg_Page>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.F_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.L_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.F_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.L_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+    </tr>
+}
+
+</table>
